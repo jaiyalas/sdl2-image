@@ -2,7 +2,7 @@ name:           sdl2-image
 version:        2.0.1
 synopsis:       Bindings to the SDL_image 2.0 library (version 2.0.1).
 description:    ...
-license:        BSD3
+license:        MIT
 license-file:   LICENSE
 author:         ...
 maintainer:     ...
@@ -63,4 +63,4 @@ executable main
                 , sdl2-image
                 , transformers
                 , linear
-   ghc-options: -O2 -w 
+   ghc-options: -O2 -w
