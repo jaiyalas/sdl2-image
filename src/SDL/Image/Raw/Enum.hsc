@@ -14,6 +14,7 @@ module SDL.Image.Raw.Enum
 import Foreign.C.Types
 --
 type ImgInitFlag = CInt
+-- 
 pattern IMG_INIT_JPG = (#const IMG_INIT_JPG) :: ImgInitFlag
 pattern IMG_INIT_PNG = (#const IMG_INIT_PNG) :: ImgInitFlag
 pattern IMG_INIT_TIF = (#const IMG_INIT_TIF) :: ImgInitFlag

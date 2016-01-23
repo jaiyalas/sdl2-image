@@ -1,4 +1,8 @@
-module SDL.Image.Raw.General where
+module SDL.Image.Raw.General
+   ( -- * General operations for SDL_image
+     imgInit
+   , imgQuit
+   )where
 --
 import Foreign.C.Types
 --
