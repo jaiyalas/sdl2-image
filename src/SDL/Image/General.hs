@@ -1,5 +1,14 @@
+{-|
+Module : SDL.Image.General
+Copyright   : Copyright (c) 2016 Yun-Yan Chi
+License     : MIT
+Maintainer  : jaiyalas@gmail.com
+
+"SDL.Image.General" provides a ligh-level warpper for
+Initializing and quiting SDL2_image.
+-}
 module SDL.Image.General
-   ( ImgInitFlag
+   ( ImgInitFlag (..)
    , initImg
    , initImgAll
    , quitImg
@@ -13,10 +22,12 @@ import Control.Monad.IO.Class
 --
 import Foreign.Marshal.Error (throwIfNeg_)
 --
--- | Structure for SDL2-image initialization flags.
-data ImgInitFlag = InitJPG -- ^ = @1 :: CInt@
-                 | InitPNG -- ^ = @2 :: CInt@
-                 | InitTIF -- ^ = @4 :: CInt@
+-- | The structure for SDL2-image initialization flags.
+--
+-- See "SDL.Image.Raw.Enum" for more details
+data ImgInitFlag = InitJPG
+                 | InitPNG
+                 | InitTIF
                  deriving (Bounded, Enum, Eq, Ord, Read, Show)
 --
 bittizedFlag :: ImgInitFlag -> CInt
@@ -39,7 +50,7 @@ initImgAll = liftIO $
    IRaw.imgInit 7
 
 -- | Quit and release SDL2-image.
--- Equivalent to 'imgQuit'.
+-- Equivalent to "IRaw.imgQuit".
 quitImg :: MonadIO m => m ()
 quitImg = IRaw.imgQuit
 {-# INLINE quitImg #-}
