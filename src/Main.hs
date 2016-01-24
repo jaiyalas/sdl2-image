@@ -1,7 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 --
+import Data.Bits
+--
 import SDL.Image
+--
 import qualified SDL as SDL
 import qualified SDL.Raw.Filesystem as SDL.RW
 import Linear.V4

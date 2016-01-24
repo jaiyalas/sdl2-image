@@ -1,3 +1,4 @@
+-- | Raw low-level FFI bindings to the SDL2_image C library. 
 module SDL.Image.Raw
    ( module SDL.Image.Raw.General
    , module SDL.Image.Raw.Loading

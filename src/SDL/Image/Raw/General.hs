@@ -10,10 +10,10 @@ import Control.Monad.IO.Class
 --
 import SDL.Image.Raw.Enum
 --
-foreign import ccall "SDL_image.h IMG_Init" imgInit_FFI :: ImgInitFlag -> IO CInt
+foreign import ccall "SDL_image.h IMG_Init" imgInit_FFI :: IIFlag -> IO CInt
 foreign import ccall "SDL_image.h IMG_Quit" imgQuit_FFI :: IO ()
 --
-imgInit :: MonadIO m => ImgInitFlag -> m CInt
+imgInit :: MonadIO m => IIFlag -> m CInt
 imgInit fs = liftIO $ imgInit_FFI fs
 {-# INLINE imgInit #-}
 --
